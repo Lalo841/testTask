@@ -1,0 +1,23 @@
+<div class="card" (mouseenter)="mouseoverFunc()">
+  <div
+    *ngIf="packageData.id.includes('/')"
+    class="card-title"
+    [ngClass]="{ hovered: isHovered(), dependency: isDependency() }"
+  >
+    <span style="color: red">{{ packageData.id.split("/")[0] }}/</span>
+    <span *ngIf="packageData.id.includes('/')">{{
+      packageData.id.split("/")[1]
+    }}</span>
+  </div>
+  <div
+    *ngIf="!packageData.id.includes('/')"
+    class="card-title"
+    [ngClass]="{ hovered: isHovered(), dependency: isDependency() }"
+  >
+    <span>{{ packageData.id }}</span>
+  </div>
+  <ul class="card-info">
+    <li>{{ downloads }} <img src="../../../assets/download-icon.png" width="10px" height="10px" alt="Not Found"></li>
+    <li>{{ dependencies }} dependencies</li>
+  </ul>
+</div>

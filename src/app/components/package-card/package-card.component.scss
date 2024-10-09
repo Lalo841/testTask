@@ -1,0 +1,33 @@
+.card {
+  height: 80px;
+  width: 160px;
+  border: 2px solid black;
+  border-radius: 8px;
+
+  .card-title {
+    border-bottom: 2px solid black;
+    padding: 0px 10px;
+  }
+
+  .hovered {
+    background-color: rgb(245, 166, 166); 
+    border-radius: 6px 6px 0px 0px;
+  }
+
+  .dependency {
+    background-color: rgb(149, 149, 242); 
+    border-radius: 6px 6px 0px 0px;
+  }
+
+  .card-info {
+    margin: 0;
+    padding: 5px 10px;
+    list-style-type: none;
+
+    li{
+      display: flex;
+      align-items: center;
+      gap:8px;
+    }
+  }
+}

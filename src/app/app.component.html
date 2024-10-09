@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="header-container">
+    <app-search-bar (sendInputText)="setSearchTextFn($event)"></app-search-bar>
+    <app-refresh-button (refreshClick)="refreshData()"></app-refresh-button>
+  </div>
+  <app-packages-list
+    [packages]="packages"
+    [inputText]="inputText"
+  ></app-packages-list>
+</div>

@@ -1,0 +1,13 @@
+<div class="card-list">
+  <app-package-card
+    class="card"
+    *ngFor="let package of packages | search : inputText"
+    [packageData]="package"
+    (mouseenter)="onMouseEnter(package)"
+    (mouseleave)="onMouseLeave()"
+    [hoverPackage]="hoverPackage"
+    [packageDependencies]="packageDependencies"
+    (sendIdEvent)="getDependenciesById($event)"
+  >
+  </app-package-card>
+</div>
